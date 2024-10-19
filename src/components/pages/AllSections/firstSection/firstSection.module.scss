@@ -1,0 +1,185 @@
+.FirstSection {
+  // min-height: 90vh;
+  background-image: linear-gradient(
+      180deg,
+      rgba(27, 32, 38, 0.4) 46.81%,
+      rgba(27, 32, 38, 0.8) 100.67%
+    ),
+    url("../../../../images/fisrt_section.png");
+  background-size: cover;
+  background-position: center;
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    .mainBlock {
+      margin-top: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .delicious {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 39px;
+
+        h4 {
+          font-family: Shalimar;
+          font-size: 40px;
+          font-weight: 400;
+          line-height: 48.8px;
+          text-align: left;
+        }
+      }
+
+      h1 {
+        font-family: Silk Serif;
+        font-size: 64px;
+        font-weight: 600;
+        line-height: 98.18px;
+        text-align: left;
+      }
+      p {
+        font-family: Spartan;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 17.92px;
+        text-align: center;
+        width: 500px;
+      }
+
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 10px;
+        gap: 8px;
+        button {
+          border: 1.6px solid #ef272c;
+          padding: 12px 22px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 7px;
+          font-family: Spartan;
+          font-size: 12px;
+          font-weight: 600;
+          line-height: 13.44px;
+          text-align: left;
+          background: none;
+        }
+        hr {
+          width: 130px;
+          border: 1.4px solid #ef272c;
+        }
+      }
+    }
+
+    .contact {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 130px;
+      margin-bottom: 30px;
+
+      .location {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        h5 {
+          font-family: Spartan;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 15.68px;
+          text-align: left;
+        }
+        hr {
+          border: 0.6px solid #ffffff;
+          width: 56px;
+        }
+        span {
+          font-family: Spartan;
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 13.44px;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .FirstSection {
+    .content {
+      .contact {
+        .location {
+          display: flex;
+          align-items: start;
+          justify-content: center;
+          flex-direction: column;
+          gap: 10px;
+          img {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 505px) {
+  .FirstSection {
+    .content {
+      .mainBlock {
+        .delicious {
+          h4 {
+            font-size: 20px;
+          }
+          h1 {
+            font-size: 44px;
+          }
+        }
+        h1 {
+          font-size: 44px;
+        }
+        p {
+          font-size: 12px;
+          width: 250px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 415px) {
+  .FirstSection {
+    .content {
+      .mainBlock {
+        .delicious {
+          h4 {
+            font-size: 15px;
+          }
+          h1 {
+            font-size: 33px;
+          }
+        }
+        h1 {
+          font-size: 33px;
+        }
+        p {
+          font-size: 10px;
+          width: 200px;
+        }
+      }
+    }
+  }
+}
