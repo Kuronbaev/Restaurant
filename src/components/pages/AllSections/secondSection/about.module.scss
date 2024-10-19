@@ -32,11 +32,12 @@
       gap: 20px;
 
       h1 {
+        max-width: 450px;
+        width: 100%;
         font-family: Silk Serif;
         font-size: 40px;
         font-weight: 600;
         line-height: 61.36px;
-        width: 300px;
       }
 
       p {
@@ -68,8 +69,8 @@
     .content {
       .block {
         h1 {
-          font-size: 35px;
-          width: 100%;
+          // font-size: 35px;
+          // width: 100%;
         }
 
         p {
