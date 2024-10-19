@@ -1,0 +1,52 @@
+.Interior {
+  width: 100%;
+  background-color: #1b2026;
+  padding: 50px 0;
+
+  .content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      h1 {
+        font-family: Shalimar;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 48.8px;
+      }
+    }
+
+    .block {
+      width: 100%;
+      display: flex;
+      align-items: start;
+      justify-content: start;
+      gap: 15px;
+      margin-right: auto;
+
+      .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+
+        .images {
+          display: flex;
+          align-items: start;
+          justify-content: start;
+          gap: 15px;
+        }
+      }
+    }
+  }
+}
