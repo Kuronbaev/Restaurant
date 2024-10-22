@@ -1,23 +1,29 @@
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
-
+body {
+	padding-top: 60px;
+}
+body::-webkit-scrollbar {
+	display: none; // Для Chrome and Safari
+}
 .container {
-  width: 80%;
-  margin: 0 auto;
-  padding: 0 20px;
+	width: 80%;
+	margin: 0 auto;
+	padding: 0 20px;
 }
 html {
-  color-scheme: dark;
+	color-scheme: dark;
+	scroll-behavior: smooth;
 }
 
 input {
-  outline: none;
+	outline: none;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
