@@ -1,58 +1,57 @@
-namespace AUTH {
-	type GetResponse = {
-		profile: User
-	};
-	type GetRequest = void;
+// namespace AUTH {
+// 	type GetResponse = {
+// 		profile: User
+// 	}
+// 	type GetRequest = void
 
-	type PostLoginResponse = {
-		accessToken: string;
-		accessTokenExpiration: number;
-		refreshToken: string
-	};
-	
-	type PostLoginRequest = {
-		email: string;
-		password: string;
-	};
+// 	type PostLoginResponse = {
+// 		accessToken: string
+// 		accessTokenExpiration: number
+// 		refreshToken: string
+// 	}
 
-	type PostRegistrationResponse = {
-		message: string;
-		accessToken: string;
-		accessTokenExpiration: number;
-		refreshToken: string
-	};
-	type PostRegistrationRequest = {
-		email: string;
-		password: string;
-		userName: string;
-		photo: string;
-	};
+// 	type PostLoginRequest = {
+// 		email: string
+// 		password: string
+// 	}
 
-	type PostLogoutResponse = {
-		message: string;
-	};
-	type PostLogoutRequest = void;
+// 	type PostRegistrationResponse = {
+// 		message: string
+// 		accessToken: string
+// 		accessTokenExpiration: number
+// 		refreshToken: string
+// 	}
+// 	type PostRegistrationRequest = {
+// 		email: string
+// 		password: string
+// 		userName: string
+// 		photo: string
+// 	}
 
-	type PatchRefreshResponse = {
-		accessToken: string;
-		accessTokenExpiration: number;
-	};
-	type PatchRefreshRequest = void;
+// 	type PostLogoutResponse = {
+// 		message: string
+// 	}
+// 	type PostLogoutRequest = void
 
-	type PostForgotPasswordResponse = {
-		message: string;
-	};
-	type PostForgotPasswordRequest = {
-		email: string;
-		frontEndUrl: string;
-	};
+// 	type PatchRefreshResponse = {
+// 		accessToken: string
+// 		accessTokenExpiration: number
+// 	}
+// 	type PatchRefreshRequest = void
 
-	type PatchResetPasswordResponse = {
-		message: string;
-	};
-	type PatchResetPasswordRequest = {
-		token: string;
-		newPassword: string;
-	};
-}
+// 	type PostForgotPasswordResponse = {
+// 		message: string
+// 	}
+// 	type PostForgotPasswordRequest = {
+// 		email: string
+// 		frontEndUrl: string
+// 	}
 
+// 	type PatchResetPasswordResponse = {
+// 		message: string
+// 	}
+// 	type PatchResetPasswordRequest = {
+// 		token: string
+// 		newPassword: string
+// 	}
+// }

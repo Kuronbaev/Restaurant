@@ -1,15 +1,39 @@
+import { motion, useScroll } from 'framer-motion'
+import Link from 'next/link'
+import { useEffect } from 'react'
 import scss from './Header.module.scss'
 
 const Header = () => {
+	const { scrollYProgress } = useScroll()
+
+	// Логируем прогресс скроллинга для отладки
+	useEffect(() => {
+		scrollYProgress.onChange(latest => {
+			console.log('Scroll progress:', latest) // Проверяем, изменяется ли значение скролла
+		})
+	}, [scrollYProgress])
+
 	return (
-		<header className={scss.Header}>
+		<motion.header
+			initial={{ opacity: 0, y: -50 }}
+			animate={{ opacity: 1, y: 0 }}
+			transition={{ duration: 0.5 }}
+			className={scss.Header}
+		>
+			{/* Прогресс-бар */}
+			<motion.div
+				className={scss.progressBar}
+				style={{ scaleX: scrollYProgress }} // Анимация ширины бара в зависимости от скролла
+			/>
 			<div className='container'>
 				<div className={scss.content}>
-					<h1 className={scss.logo}>Restaurant</h1>
+					<Link href='/'>
+						<h1 className={scss.logo}>Restaurant</h1>
+					</Link>
 					<input type='checkbox' id='nav-check' className={scss.navCheck} />
 					<nav>
 						<div className={scss.navBtn}>
-							<label for='nav-check'>
+							<label htmlFor='nav-check'>
 								<span></span>
 								<span></span>
 								<span></span>
@@ -17,10 +41,10 @@ const Header = () => {
 						</div>
 					</nav>
 					<nav className={scss.navigation}>
-						<a href='#'>Menu</a>
-						<a href='#about'>About us</a>
-						<a href='#interior'>Interior</a>
-						<a href='#contact'>Contacts</a>
+						<Link href='/menu'>Menu</Link>
+						<Link href='#about'>About us</Link>
+						<Link href='#interior'>Interior</Link>
+						<Link href='#contact'>Contacts</Link>
 					</nav>
 					<div className={scss.block}>
 						<div className={scss.search}>
@@ -50,7 +74,7 @@ const Header = () => {
 					</div>
 				</div>
 			</div>
-		</header>
+		</motion.header>
 	)
 }
 

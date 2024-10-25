@@ -1,6 +1,8 @@
 'use client'
+import Template from '@/components/ui/Template'
 import leftIcon from '@/images/leftIcon.png'
 import rightIcon from '@/images/rightIcon.png'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { FaArrowRight } from 'react-icons/fa6'
@@ -62,41 +64,55 @@ const Delicious = () => {
 							<button>Contact</button>
 						</div>
 					</div>
+					<Template>
+						{/* Основная секция с кнопкой вызова формы */}
+						<div className={scss.mainBlock}>
+							<div className={scss.hero}>
+								<Image width={51} height={14} src={leftIcon} alt='photo' />
+								<h1>Main Menu</h1>
+								<Image width={51} height={14} src={rightIcon} alt='photo' />
+							</div>
 
-					{/* Основная секция с кнопкой вызова формы */}
-					<div className={scss.mainBlock}>
-						<div className={scss.hero}>
-							<Image width={51} height={14} src={leftIcon} alt='photo' />
-							<h1>Main Menu</h1>
-							<Image width={51} height={14} src={rightIcon} alt='photo' />
+							<h1>Italian Cuisine</h1>
+							<p>
+								Classic steak & delicious with delightfully unexpected twists.
+								The Restaurant's sunny decor was inspired by the diners.
+							</p>
+							<div className={scss.btn}>
+								<hr />
+								<button
+									className={scss.formContact}
+									onClick={handleButtonClick}
+								>
+									Reserve Your Table <FaArrowRight className={scss.arrow} />
+								</button>
+								<hr />
+							</div>
 						</div>
-
-						<h1>Italian Cuisine</h1>
-						<p>
-							Classic steak & delicious with delightfully unexpected twists. The
-							Restaurant's sunny decor was inspired by the diners.
-						</p>
-						<div className={scss.btn}>
-							<hr />
-							<button className={scss.formContact} onClick={handleButtonClick}>
-								Reserve Your Table <FaArrowRight className={scss.arrow} />
-							</button>
-							<hr />
-						</div>
-					</div>
+					</Template>
 
 					{/* Контактная информация */}
 					<div className={scss.contact}>
-						<div className={scss.location}>
+						<motion.div
+							initial={{ opacity: 0, x: -50 }}
+							animate={{ opacity: 1, x: 0 }}
+							transition={{ duration: 0.5 }}
+							className={scss.location}
+						>
 							<h5>Location</h5>
 							<hr />
 							<span>Rua da moeda 1g, 1200-275, Portugal</span>
-						</div>
-						<div className={scss.location}>
+						</motion.div>
+						<motion.div
+							initial={{ opacity: 0, x: 50 }}
+							animate={{ opacity: 1, x: 0 }}
+							transition={{ duration: 0.5 }}
+							className={scss.location}
+						>
 							<h5>Hotline</h5>
 							<hr />
 							<span>+771219900</span>
-						</div>
+						</motion.div>
 					</div>
 				</div>
 			</div>

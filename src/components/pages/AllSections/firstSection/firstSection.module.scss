@@ -1,3 +1,15 @@
+.typingText {
+	display: flex;
+	gap: 0.5px;
+	span {
+		font-size: 64px;
+		font-weight: 600;
+		line-height: 98.18px;
+		color: white;
+		font-family: 'Silk Serif';
+	}
+}
+
 .FirstSection {
 	background-image: linear-gradient(
 			180deg,

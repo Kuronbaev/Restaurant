@@ -4,27 +4,49 @@ import email from '@/images/email.png'
 import insta from '@/images/Instagram.png'
 import leftIcon from '@/images/leftIcon.png'
 import telegram from '@/images/Telegram.png'
+import { motion, useInView } from 'framer-motion'
 import Image from 'next/image'
+import { useRef } from 'react'
 import { FaArrowRight } from 'react-icons/fa6'
 import scss from './visitRestaurant.module.scss'
 
 const VisitRestaurant = () => {
+	const ref = useRef(null)
+	const isInView = useInView(ref, { once: true })
 	return (
 		<section id='contact' className={scss.VisitRestaurant}>
 			<div className='container'>
 				<div className={scss.content}>
-					<div className={scss.hero}>
+					<motion.div
+						ref={ref}
+						initial={{ opacity: 0, x: -50 }}
+						animate={isInView ? { opacity: 1, x: 0 } : {}}
+						transition={{
+							duration: 1,
+						}}
+						className={scss.hero}
+					>
 						<Image width={51} height={14} src={leftIcon} alt='photo' />
 						<h1>Visit Restaurant</h1>
-					</div>
+					</motion.div>
 					<div className={scss.box}>
-						<div className={scss.block}>
+						<motion.div
+							ref={ref}
+							initial={{ opacity: 0, y: 50 }}
+							animate={isInView ? { opacity: 1, y: 0 } : {}}
+							transition={{
+								duration: 1,
+							}}
+							className={scss.block}
+						>
 							<h1>Join Us for Happy Hours</h1>
+
 							<h5>Your neighborhood</h5>
 							<h4>225$.Lake Ave.Suite 1150 Pasadena,CA 911101</h4>
 							<h5>Opening hours:</h5>
 							<h4>Mon-Thu: 10:00 am - 01:00 am</h4>
 							<h4>Fri-Sun: 10:00 am - 02:00 am</h4>
+
 							<div className={scss.btn}>
 								<hr />
 								<button>
@@ -32,8 +54,16 @@ const VisitRestaurant = () => {
 								</button>
 								<hr />
 							</div>
-						</div>
-						<div className={scss.block2}>
+						</motion.div>
+						<motion.div
+							ref={ref}
+							initial={{ opacity: 0, x: 100 }}
+							animate={isInView ? { opacity: 1, x: 0 } : {}}
+							transition={{
+								duration: 1,
+							}}
+							className={scss.block2}
+						>
 							<h3>contact Info</h3>
 							<div className={scss.contact}>
 								<div className={scss.number}>
@@ -57,7 +87,7 @@ const VisitRestaurant = () => {
 								loading='lazy'
 								referrerPolicy='no-referrer-when-downgrade'
 							/>
-						</div>
+						</motion.div>
 					</div>
 				</div>
 			</div>

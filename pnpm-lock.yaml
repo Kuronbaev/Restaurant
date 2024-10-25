@@ -38,15 +38,9 @@ importers:
       react-router-dom:
         specifier: ^6.27.0
         version: 6.27.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react-swipeable:
-        specifier: ^7.0.1
-        version: 7.0.1(react@18.3.1)
       sass:
         specifier: ^1.80.1
         version: 1.80.1
-      swiper:
-        specifier: ^11.1.14
-        version: 11.1.14
     devDependencies:
       '@types/node':
         specifier: ^20
@@ -1308,11 +1302,6 @@ packages:
     peerDependencies:
       react: '>=16.8'
 
-  react-swipeable@7.0.1:
-    resolution: {integrity: sha512-RKB17JdQzvECfnVj9yDZsiYn3vH0eyva/ZbrCZXZR0qp66PBRhtg4F9yJcJTWYT5Adadi+x4NoG53BxKHwIYLQ==}
-    peerDependencies:
-      react: ^16.8.3 || ^17 || ^18
-
   react@18.3.1:
     resolution: {integrity: sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==}
     engines: {node: '>=0.10.0'}
@@ -1494,10 +1483,6 @@ packages:
   supports-preserve-symlinks-flag@1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
-
-  swiper@11.1.14:
-    resolution: {integrity: sha512-VbQLQXC04io6AoAjIUWuZwW4MSYozkcP9KjLdrsG/00Q/yiwvhz9RQyt0nHXV10hi9NVnDNy1/wv7Dzq1lkOCQ==}
-    engines: {node: '>= 4.7.0'}
 
   tapable@2.2.1:
     resolution: {integrity: sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==}
@@ -3006,10 +2991,6 @@ snapshots:
       '@remix-run/router': 1.20.0
       react: 18.3.1
 
-  react-swipeable@7.0.1(react@18.3.1):
-    dependencies:
-      react: 18.3.1
-
   react@18.3.1:
     dependencies:
       loose-envify: 1.4.0
@@ -3213,8 +3194,6 @@ snapshots:
       has-flag: 4.0.0
 
   supports-preserve-symlinks-flag@1.0.0: {}
-
-  swiper@11.1.14: {}
 
   tapable@2.2.1: {}
 

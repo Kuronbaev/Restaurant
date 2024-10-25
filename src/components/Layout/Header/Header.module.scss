@@ -7,7 +7,15 @@
 	width: 100%;
 	z-index: 1000;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.6);
-
+	.progressBar {
+		position: fixed;
+		top: 73px;
+		left: 0;
+		right: 0;
+		height: 3px;
+		background: rgb(239, 39, 44);
+		transform-origin: 0%;
+	}
 	.content {
 		.navCheck {
 			display: none;
