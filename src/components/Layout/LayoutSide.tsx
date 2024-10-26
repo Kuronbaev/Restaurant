@@ -6,6 +6,7 @@ import scss from './LayoutSide.module.scss'
 interface LayoutProps {
 	children: React.ReactNode
 }
+
 const LayoutSide: FC<LayoutProps> = ({ children }) => {
 	return (
 		<div className={scss.LayoutSide}>

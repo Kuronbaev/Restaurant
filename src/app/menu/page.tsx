@@ -1,7 +1,5 @@
-import Menus from '@/components/ui/Menus'
-
 const page = () => {
-	return <Menus />
+	return <div style={{ padding: '100px 0px 0px 0px' }}>Menu</div>
 }
 
 export default page

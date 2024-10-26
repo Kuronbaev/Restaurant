@@ -1,4 +1,5 @@
 'use client'
+import FormInput from '@/components/ui/ModalWindow/FormInput'
 import Template from '@/components/ui/Template'
 import leftIcon from '@/images/leftIcon.png'
 import rightIcon from '@/images/rightIcon.png'
@@ -31,6 +32,10 @@ const Delicious = () => {
 		}
 	}, [showForm])
 
+	// Функция для разбивки текста на буквы
+	const text = 'Italian Cuisine'
+	const letters = text.split('')
+
 	return (
 		<section className={scss.FirstSection}>
 			<div className='container'>
@@ -44,26 +49,7 @@ const Delicious = () => {
 					)}
 
 					{/* Форма модалки */}
-					<div className={`${scss.formWrapper} ${showForm ? scss.show : ''}`}>
-						<div className={scss.form}>
-							<div className={scss.inputWrapper}>
-								<span className={scss.circle}></span>
-								<div className={scss.reserve}>
-									<h1>NAME</h1>
-									<input type='text' placeholder='Your Name' />
-								</div>
-							</div>
-
-							<div className={scss.inputWrapper}>
-								<span className={scss.circle}></span>
-								<div className={scss.reserve}>
-									<h1>PHONE</h1>
-									<input type='tel' placeholder='Your Phone' />
-								</div>
-							</div>
-							<button>Contact</button>
-						</div>
-					</div>
+					<FormInput showForm={showForm} />
 					<Template>
 						{/* Основная секция с кнопкой вызова формы */}
 						<div className={scss.mainBlock}>
@@ -73,7 +59,32 @@ const Delicious = () => {
 								<Image width={51} height={14} src={rightIcon} alt='photo' />
 							</div>
 
-							<h1>Italian Cuisine</h1>
+							{/* Анимация по буквам для текста Italian Cuisine */}
+							<h1 className={scss.animatedText}>
+								{letters.map((letter, index) => (
+									<motion.span
+										key={index}
+										initial={{ y: 0, opacity: 0 }} // Начальная позиция
+										animate={{
+											// y: [-30, -30, -30], // Движение вверх и вниз
+											// opacity: [0, 1, 1], // Изменение прозрачности
+											opacity: 1,
+											// rotate: [0, 10, -10, 0], // Легкое вращение
+										}}
+										transition={{
+											duration: 0.6,
+											delay: index * 0.1, // Задержка для каждой буквы
+											type: 'spring', // Используем эффект пружины
+											stiffness: 100, // Жесткость пружины
+											repeat: Infinity, // Бесконечное повторение
+											repeatType: 'loop', // Повторяем по кругу
+										}}
+									>
+										{letter}
+									</motion.span>
+								))}
+							</h1>
+
 							<p>
 								Classic steak & delicious with delightfully unexpected twists.
 								The Restaurant's sunny decor was inspired by the diners.
