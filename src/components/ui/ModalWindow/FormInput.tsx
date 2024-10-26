@@ -73,7 +73,6 @@ const FormInput = ({ showForm }: { showForm: boolean }) => {
 					<div className={scss.reserve}>
 						<h1>PHONE</h1>
 						<input
-							name='phone'
 							{...register('phone', { required: true })}
 							placeholder='Your Phone'
 						/>
