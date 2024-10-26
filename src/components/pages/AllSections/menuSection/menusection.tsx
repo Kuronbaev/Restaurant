@@ -10,14 +10,30 @@ import { useRef, useState } from 'react'
 import { FaArrowRight } from 'react-icons/fa6'
 import scss from './menusection.module.scss'
 
+// Определяем типы
+type MenuItem = {
+	name: string
+	price: string
+	description: string
+}
+
+type MenuItems = {
+	Desserts: MenuItem[]
+	'Hot Drinks': MenuItem[]
+	'Cold Drinks': MenuItem[]
+	'Fast Foods': MenuItem[]
+	'National Food': MenuItem[]
+}
+
 const Menu = () => {
-	const [selectedCategory, setSelectedCategory] = useState<string>(
-		categories[0].name
+	// Указываем тип selectedCategory как keyof MenuItems
+	const [selectedCategory, setSelectedCategory] = useState<keyof MenuItems>(
+		categories[0].name as keyof MenuItems // Приведение типа
 	)
 	const ref = useRef(null)
 	const isInView = useInView(ref, { once: true })
 
-	const handleCategoryClick = async (categoryName: string) => {
+	const handleCategoryClick = (categoryName: keyof MenuItems) => {
 		if (selectedCategory !== categoryName) {
 			setSelectedCategory(categoryName)
 		}
@@ -53,7 +69,9 @@ const Menu = () => {
 						{categories.map(category => (
 							<button
 								key={category.id}
-								onClick={() => handleCategoryClick(category.name)}
+								onClick={() =>
+									handleCategoryClick(category.name as keyof MenuItems)
+								} // Приведение типа
 								className={`${scss.categorybutton} ${
 									selectedCategory === category.name ? scss.active : ''
 								}`}
@@ -72,7 +90,9 @@ const Menu = () => {
 									delay: category.id * 0.1,
 									duration: 0.5,
 								}}
-								onClick={() => handleCategoryClick(category.name)}
+								onClick={() =>
+									handleCategoryClick(category.name as keyof MenuItems)
+								} // Приведение типа
 								className={`${scss.categorybutton} ${
 									selectedCategory === category.name ? scss.active : ''
 								}`}
