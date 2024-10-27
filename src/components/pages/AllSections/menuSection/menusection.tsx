@@ -1,9 +1,9 @@
 'use client'
-import { categories, menuItems } from '@/data/categories'
 import {
 	default as leftIcon,
 	default as rightIcon,
 } from '@/assets//images/leftIcon.png'
+import { categories, menuItems } from '@/data/categories'
 import { AnimatePresence, motion, useInView } from 'framer-motion'
 import Image from 'next/image'
 import { useRef, useState } from 'react'

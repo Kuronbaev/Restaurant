@@ -92,3 +92,93 @@ export const menuItems = {
 		},
 	],
 }
+
+export const menus = {
+	Desserts: [
+		{
+			name: 'Ice Cream',
+			price: '$9.11',
+			url: '/IceCream1.png',
+			composition: 'soda,cream,mild,sugar',
+			extras: [
+				{ name: 'Cherry', price: '$0.90' },
+				{ name: 'Cherry', price: '$0.90' },
+			],
+			drinks: [
+				{ name: 'Coca Cola', price: '$0.90' },
+				{ name: 'Coca Cola', price: '$0.90' },
+			],
+		},
+		{
+			name: 'Ice Cream',
+			price: '$9.11',
+			url: '/IceCream2.png',
+			composition: 'soda,cream,mild,sugar',
+			extras: [
+				{ name: 'Cherry', price: '$0.90' },
+				{ name: 'Cherry', price: '$0.90' },
+			],
+			drinks: [
+				{ name: 'Coca Cola', price: '$0.90' },
+				{ name: 'Coca Cola', price: '$0.90' },
+			],
+		},
+		{
+			name: 'Ice Cream',
+			price: '$9.11',
+			url: '/IceCream3.png',
+			composition: 'soda,cream,mild,sugar',
+			extras: [
+				{ name: 'Cherry', price: '$0.90' },
+				{ name: 'Cherry', price: '$0.90' },
+			],
+			drinks: [
+				{ name: 'Coca Cola', price: '$0.90' },
+				{ name: 'Coca Cola', price: '$0.90' },
+			],
+		},
+		{
+			name: 'Ice Cream',
+			price: '$9.11',
+			url: '/IceCream4.png',
+			composition: 'soda,cream,mild,sugar',
+			extras: [
+				{ name: 'Cherry', price: '$0.90' },
+				{ name: 'Cherry', price: '$0.90' },
+			],
+			drinks: [
+				{ name: 'Coca Cola', price: '$0.90' },
+				{ name: 'Coca Cola', price: '$0.90' },
+			],
+		},
+		{
+			name: 'Ice Cream',
+			price: '$9.11',
+			url: '/IceCream5.png',
+			composition: 'soda,cream,mild,sugar',
+			extras: [
+				{ name: 'Cherry', price: '$0.90' },
+				{ name: 'Cherry', price: '$0.90' },
+			],
+			drinks: [
+				{ name: 'Coca Cola', price: '$0.90' },
+				{ name: 'Coca Cola', price: '$0.90' },
+			],
+		},
+		{
+			name: 'Ice Cream',
+			price: '$9.11',
+			url: '/IceCream6.png',
+			composition: 'soda,cream,mild,sugar',
+			extras: [
+				{ name: 'Cherry', price: '$0.90' },
+				{ name: 'Cherry', price: '$0.90' },
+			],
+			drinks: [
+				{ name: 'Coca Cola', price: '$0.90' },
+				{ name: 'Coca Cola', price: '$0.90' },
+			],
+		},
+	],
+	'Hot Drinks': [],
+}

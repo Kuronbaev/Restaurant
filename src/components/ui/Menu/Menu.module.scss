@@ -1,0 +1,318 @@
+@import url(https://fonts.googleapis.com/css?family=League+Spartan:100,200,300,regular,500,600,700,800,900);
+.Menu {
+	background: rgb(27, 32, 38);
+	padding: 100px 0;
+
+	.content {
+		gap: 306px;
+		display: flex;
+		justify-content: space-between;
+
+		.categories {
+			width: 363px;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.categorybutton {
+			position: relative;
+			background: rgb(31, 39, 49);
+			border: none;
+			color: white;
+			font-size: 24px;
+			font-weight: 600;
+			cursor: pointer;
+			width: 100%;
+			height: 66px;
+			transition: background-color 0.3s ease, transform 0.2s ease,
+				color 0.3s ease;
+			line-height: 37px;
+
+			&::before {
+				z-index: 10;
+				position: absolute;
+				content: '';
+				width: 238.01px;
+				left: 15%;
+				bottom: 6.2px;
+				opacity: 0.6;
+				border: 0.4px solid rgb(229, 229, 229);
+				transition: all 0.3s ease;
+			}
+
+			&:hover {
+				background: rgb(239, 39, 44);
+				color: white;
+				transform: translateY(-3px);
+			}
+
+			&.active {
+				background: rgb(239, 39, 44);
+				color: white;
+
+				&::before {
+					width: 50px;
+					left: auto;
+					right: -7%;
+					border: 1px solid white;
+					bottom: 50%;
+					transform: translateY(50%);
+				}
+			}
+		}
+
+		.menuitems {
+			.selectedItem {
+				position: relative;
+				background: rgb(31, 39, 49);
+				width: 773px;
+				height: 250px;
+				display: flex;
+				// align-items: center;
+				// justify-content: space-between;
+				margin-bottom: 30px;
+				.rightItems {
+					width: 327px;
+					margin-left: 27px;
+					margin-top: 25px;
+					h4 {
+						color: rgb(255, 255, 255);
+						font-family: 'Spartan', sans-serif;
+						font-size: 18px;
+						font-weight: 600;
+						line-height: 20px;
+						letter-spacing: 0%;
+					}
+					ul {
+						list-style: none;
+						li {
+							display: flex;
+							align-items: center;
+							justify-content: space-between;
+							margin-top: 12px;
+							color: rgb(147, 147, 147);
+							font-family: 'Spartan', sans-serif;
+							font-size: 15px;
+							font-weight: 500;
+							line-height: 17px;
+							letter-spacing: 0%;
+							text-align: left;
+						}
+					}
+				}
+				button {
+					cursor: pointer;
+					position: absolute;
+					top: -80px;
+					left: -90%;
+					width: 53px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					height: 53px;
+					background-color: transparent;
+					border: none;
+					outline: none;
+				}
+				img {
+				}
+				.notTogether {
+					padding: 0 12px;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					color: black;
+
+					.together {
+						h2 {
+							color: rgb(255, 255, 255);
+							font-family: Spartan;
+							font-size: 16px;
+							font-weight: 600;
+							line-height: 18px;
+							letter-spacing: 0%;
+						}
+						p {
+							margin-top: 6px;
+							color: rgb(147, 147, 147);
+							font-family: Spartan;
+							font-size: 14px;
+							font-weight: 500;
+							line-height: 16px;
+							letter-spacing: 7%;
+						}
+					}
+					h3 {
+						color: rgb(239, 39, 44);
+						font-family: Spartan;
+						font-size: 24px;
+						font-weight: 600;
+						line-height: 18px;
+						text-align: left;
+					}
+				}
+			}
+		}
+
+		.alls {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 30px;
+
+			.menuItem {
+				list-style: none;
+				position: relative;
+				width: 329px;
+				height: 250px;
+				border-radius: 2px;
+				background: rgb(255, 255, 255);
+				color: black;
+
+				.menuItemHeader {
+					img {
+						width: 100%; // Убедитесь, что изображение адаптивное
+						height: auto; // Поддержка пропорций
+					}
+					.notTogether {
+						padding: 0 12px;
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+
+						.together {
+							h2 {
+								color: rgb(31, 39, 49);
+								font-family: Spartan;
+								font-size: 18px;
+								font-weight: 600;
+								line-height: 18px;
+								text-align: left;
+							}
+							p {
+								margin-top: 6px;
+								color: rgb(147, 147, 147);
+								font-family: Spartan;
+								font-size: 14px;
+								font-weight: 500;
+								line-height: 16px;
+								letter-spacing: 7%;
+								text-align: left;
+							}
+						}
+						h3 {
+							color: rgb(239, 39, 44);
+							font-family: Spartan;
+							font-size: 24px;
+							font-weight: 600;
+							line-height: 18px;
+							text-align: left;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1440px) {
+	.Menu {
+		.content {
+			gap: 100px;
+			.menuitems {
+				.alls {
+					width: 700px;
+				}
+				.selectedItem {
+					button {
+						top: -60;
+						left: -75%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.Menu {
+		.content {
+			display: flex;
+			flex-direction: column;
+			.categories {
+				display: flex;
+				flex-direction: row;
+				gap: 30px;
+				width: 100%;
+				overflow-x: auto; // Позволяет прокрутку по оси X
+				.categorybutton {
+					min-width: 200px; // Задайте минимальную ширину для кнопок
+					&::before {
+						display: none;
+					}
+				}
+			}
+			gap: 50px;
+			.menuitems {
+				.alls {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+				.selectedItem {
+					button {
+						top: -15px;
+						left: 95%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.Menu {
+		.content {
+			display: flex;
+			flex-direction: column;
+			.categories {
+				display: flex;
+				flex-direction: row;
+				gap: 30px;
+				width: 100%;
+				overflow-x: auto; // Позволяет прокрутку по оси X
+				.categorybutton {
+					min-width: 140px; // Задайте минимальную ширину для кнопок
+					color: rgb(255, 255, 255);
+					font-size: 18px;
+					// line-height: 16px;
+					&::before {
+						display: none;
+					}
+				}
+			}
+			gap: 50px;
+			.menuitems {
+				.alls {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					.menuItem {
+						width: 250px;
+						height: 210px;
+					}
+				}
+				.selectedItem {
+					width: 600px;
+					padding-right: 10px;
+					button {
+						top: -25px;
+					}
+				}
+			}
+		}
+	}
+}
