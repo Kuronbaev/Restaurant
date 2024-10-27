@@ -1,102 +1,49 @@
 .Interior {
-	width: 100%;
-	background-color: #1b2026;
-	padding: 50px 0;
+  width: 100%;
+  background-color: #1b2026;
+  padding: 70px 0;
 
-	.content {
-		width: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		gap: 20px;
+  .content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
 
-		.blocks {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			max-width: 1440px;
-			overflow-x: auto;
-			padding: 0px 20px;
-			scroll-behavior: smooth;
-			&::-webkit-scrollbar {
-				display: none;
-			}
-			.block {
-				flex: 0 0 auto;
-				width: 100%;
-				display: flex;
-				align-items: start;
-				justify-content: start;
-				gap: 15px;
-				margin-right: auto;
+    .block {
+      width: 100%;
+      display: flex;
+      align-items: start;
+      justify-content: start;
+      gap: 15px;
+      overflow-x: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      img:hover {
+        filter: brightness(1.3);
+      }
 
-				.box {
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					flex-direction: column;
-					gap: 15px;
-
-					.images {
-						flex: 0 0 auto;
-						display: flex;
-						align-items: start;
-						justify-content: start;
-						gap: 15px;
-					}
-				}
-			}
-		}
-		.hero {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			gap: 10px;
-
-			h1 {
-				font-family: Shalimar;
-				font-size: 40px;
-				font-weight: 400;
-				line-height: 48.8px;
-			}
-		}
-		.hiro {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			h2 {
-				text-align: center;
-				color: rgb(255, 255, 255);
-				font-family: Silk Serif;
-				font-size: 40px;
-				font-weight: 600;
-				line-height: 61px;
-				letter-spacing: 0%;
-				text-align: left;
-			}
-		}
-	}
-}
-
-@media (max-width: 1024px) {
-	.blocks {
-		width: 1000px;
-		.imageg {
-			margin-left: 435px;
-		}
-	}
-}
-
-@media (max-width: 768px) {
-	.Interior {
-		.content {
-			.blocks {
-				width: 700px;
-				.imageg {
-					display: none;
-				}
-			}
-		}
-	}
+      .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+        .images {
+          display: flex;
+          align-items: start;
+          justify-content: center;
+          gap: 15px;
+        }
+      }
+    }
+  }
 }
