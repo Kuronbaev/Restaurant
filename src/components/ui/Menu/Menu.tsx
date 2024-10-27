@@ -15,13 +15,15 @@ type MenuItem = {
 	url: string
 }
 
+type MenuType = keyof typeof menus
+
 const Menu = () => {
-	const [selectedCategory, setSelectedCategory] = useState<string>(
-		categories[0].name
+	const [selectedCategory, setSelectedCategory] = useState<MenuType>(
+		categories[0].name as MenuType // Приведение типа для начального значения
 	)
 	const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null)
 
-	const handleCategory = (categoryName: string) => {
+	const handleCategory = (categoryName: MenuType) => {
 		if (!selectedItem) {
 			setSelectedCategory(categoryName)
 			setSelectedItem(null)
@@ -59,7 +61,7 @@ const Menu = () => {
 										delay: category.id * 0.1,
 										duration: 0.5,
 									}}
-									onClick={() => handleCategory(category.name)}
+									onClick={() => handleCategory(category.name as MenuType)}
 									className={`${scss.categorybutton} ${
 										selectedCategory === category.name ? scss.active : ''
 									}`}
