@@ -35,26 +35,26 @@ function ImageSwiper() {
           slidesPerView={2}
           onSwiper={(swiper) => setSwiperInstance(swiper)}
           onSlideChange={() => console.log("slide change")}
-          style={{ maxWidth: "550px", width: "100%", margin: "0 auto" }}
+          // style={{ maxWidth: "515px", width: "100%", margin: "0 auto" }}
           className={scss.mySwiper}
         >
           <SwiperSlide>
-            <Image src={one} alt="Dish 1" width={250} height={281} />
+            <Image src={one} alt="Dish 1" width={266} height={280} />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={two} alt="Dish 2" width={250} height={280} />
+            <Image src={two} alt="Dish 2" width={266} height={280} />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={three} alt="Dish 2" width={250} height={280} />
+            <Image src={three} alt="Dish 2" width={266} height={280} />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={four} alt="Dish 2" width={250} height={280} />
+            <Image src={four} alt="Dish 2" width={266} height={280} />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={five} alt="Dish 2" width={250} height={280} />
+            <Image src={five} alt="Dish 2" width={266} height={280} />
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={six} alt="Dish 2" width={250} height={280} />
+            <Image src={six} alt="Dish 2" width={266} height={280} />
           </SwiperSlide>
         </Swiper>
       </div>

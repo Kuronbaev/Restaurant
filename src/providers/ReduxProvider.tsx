@@ -1,18 +1,17 @@
-import { FC, ReactNode } from "react"
-import { Provider } from "react-redux"
-import { store } from "../redux/store"
+import { FC, ReactNode } from "react";
+import { Provider } from "react-redux";
+import { store } from "../redux/store";
 
 interface ReduxProviderProps {
-  children: ReactNode,
+  children: ReactNode;
 }
 
-
-const ReduxProvider: FC<ReduxProviderProps> = ({children}) => {
+const ReduxProvider: FC<ReduxProviderProps> = ({ children }) => {
   return (
     <>
-     <Provider store={store}>{children}</Provider>
+      <Provider store={store}>{children}</Provider>
     </>
-  )
-}
+  );
+};
 
-export default ReduxProvider
+export default ReduxProvider;
