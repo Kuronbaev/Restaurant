@@ -10,88 +10,91 @@ import Image from 'next/image'
 import scss from './interior.module.scss'
 
 const Interior = () => {
-	return (
-		<section id='interior' className={scss.Interior}>
-			<div className='container'>
-				<div className={scss.content}>
-					<div className={scss.hero}>
-						<Image width={51} height={14} src={leftIcon} alt='photo' />
-						<h1>modern interior</h1>
-						<Image width={51} height={14} src={rightIcon} alt='photo' />
-					</div>
-					<div className={scss.block}>
-						<Image
-							src={interior1}
-							alt='photo'
-							width={400}
-							height={400}
-							quality={100}
-						/>
+  return (
+    <section className={scss.Interior} id="interior">
+      <div className="container">
+        <div className={scss.content}>
+          <div className={scss.hero}>
+            <Image width={51} height={14} src={leftIcon} alt="photo" />
+            <h1>modern interior</h1>
+            <Image width={51} height={14} src={rightIcon} alt="photo" />
+          </div>
+          <div className={scss.block}>
+            <Image
+              src={interior1}
+              alt="photo"
+              width={426}
+              height={488}
+              quality={100}
+            />
 
-						<div className={scss.box}>
-							<Image
-								src={interior2}
-								alt='photo'
-								width={415}
-								height={200}
-								quality={100}
-							/>
-							<div className={scss.images}>
-								<Image
-									src={interior3}
-									alt='photo'
-									width={200}
-									height={186}
-									quality={100}
-								/>
-								<Image
-									src={interior4}
-									alt='photo'
-									width={200}
-									height={186}
-									quality={100}
-								/>
-							</div>
-						</div>
-						<Image
-							src={interior1}
-							alt='photo'
-							width={400}
-							height={400}
-							quality={100}
-						/>
+            <div className={scss.box}>
+              <Image
+                src={interior2}
+                alt="photo"
+                width={501}
+                height={244}
+                quality={100}
+              />
+              <div className={scss.images}>
+                <Image
+                  src={interior3}
+                  alt="photo"
+                  width={278}
+                  height={223}
+                  quality={100}
+                />
+                <Image
+                  src={interior4}
+                  alt="photo"
+                  width={208}
+                  height={223}
+                  quality={100}
+                />
+              </div>
+            </div>
 
-						<div className={scss.box}>
-							<Image
-								src={interior2}
-								alt='photo'
-								width={415}
-								height={200}
-								quality={100}
-							/>
-							<div className={scss.images}>
-								<Image
-									src={interior3}
-									alt='photo'
-									width={200}
-									height={186}
-									quality={100}
-								/>
-								<Image
-									src={interior4}
-									alt='photo'
-									width={200}
-									height={186}
-									quality={100}
-								/>
-							</div>
-						</div>
-						<Image src={interior5} alt='photo' width={400} height={400} />
-					</div>
-				</div>
-			</div>
-		</section>
-	)
-}
+            <Image
+              src={interior1}
+              alt="photo"
+              width={426}
+              height={488}
+              quality={100}
+            />
+
+            <div className={scss.box}>
+              <Image
+                src={interior2}
+                alt="photo"
+                width={501}
+                height={244}
+                quality={100}
+              />
+              <div className={scss.images}>
+                <Image
+                  src={interior3}
+                  alt="photo"
+                  width={278}
+                  height={223}
+                  quality={100}
+                />
+                <Image
+                  src={interior4}
+                  alt="photo"
+                  width={208}
+                  height={223}
+                  quality={100}
+                />
+              </div>
+            </div>
+
+            <Image src={interior5} alt="photo" width={427} height={488} />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 
 export default Interior

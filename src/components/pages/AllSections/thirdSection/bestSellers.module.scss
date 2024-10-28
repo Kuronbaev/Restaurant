@@ -17,14 +17,11 @@
         font-family: Shalimar;
         font-size: 40px;
         font-weight: 400;
-        line-height: 48.8px;
-        text-align: left;
       }
     }
 
     .block {
       width: 100%;
-
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -69,14 +66,6 @@
         gap: 20px;
         .text {
           width: 100%;
-          h1 {
-            font-size: 40px;
-            width: 320px;
-          }
-          p {
-            font-size: 16px;
-            width: 400px;
-          }
         }
         .images {
           width: 100%;
@@ -89,11 +78,6 @@
   .BestSellers {
     .content {
       .block {
-        display: flex;
-        align-items: start;
-        justify-content: start;
-        gap: 10px;
-        flex-direction: column;
         .text {
           h1 {
             font-size: 40px;

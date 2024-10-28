@@ -46,6 +46,7 @@ const VisitRestaurant = () => {
 							<h4>Mon-Thu: 10:00 am - 01:00 am</h4>
 							<h4>Fri-Sun: 10:00 am - 02:00 am</h4>
 
+
 							<div className={scss.btn}>
 								<hr />
 								<button>

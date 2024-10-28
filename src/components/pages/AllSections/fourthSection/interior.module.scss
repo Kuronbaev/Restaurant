@@ -1,7 +1,7 @@
 .Interior {
   width: 100%;
   background-color: #1b2026;
-  padding: 70px 0;
+  padding: 90px 0;
 
   .content {
     width: 100%;
@@ -16,6 +16,14 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
+
+      h1 {
+        font-family: Shalimar;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 48.8px;
+        text-align: left;
+      }
     }
 
     .block {

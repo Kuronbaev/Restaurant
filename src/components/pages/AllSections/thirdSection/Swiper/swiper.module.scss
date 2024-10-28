@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   gap: 10px;
 
   .swiperContainer {
@@ -17,46 +17,5 @@
 
   .btn {
     cursor: pointer;
-  }
-}
-// @media (max-width: 1150px) {
-//   .content {
-//     .swiperContainer {
-//       img {
-//       }
-//     }
-
-//     .btn {
-//       img {
-//       }
-//     }
-//   }
-// }
-
-// @media (max-width: 844px) {
-//   .content {
-//     .swiperContainer {
-//       img {
-//       }
-//     }
-
-//     .btn {
-//       img {
-//       }
-//     }
-//   }
-// }
-
-@media (max-width: 480px) {
-  .content {
-    .swiperContainer {
-      img {
-      }
-    }
-
-    .btn {
-      img {
-      }
-    }
   }
 }
