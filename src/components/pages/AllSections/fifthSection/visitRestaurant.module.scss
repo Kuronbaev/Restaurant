@@ -1,127 +1,126 @@
 .VisitRestaurant {
-	padding: 90px 0;
-	background-color: #1b2026;
-	width: 100%;
-	.content {
-		.hero {
-			display: flex;
-			align-items: center;
-			justify-content: start;
-			gap: 10px;
+  padding: 90px 0;
+  background-color: #1b2026;
+  width: 100%;
+  .content {
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 10px;
 
-			h1 {
-				font-family: Shalimar;
-				font-size: 40px;
-				font-weight: 400;
-				line-height: 48.8px;
-			}
-		}
+      h1 {
+        font-family: Shalimar;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 48.8px;
+      }
+    }
 
-		.box {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			gap: 20px;
+    .box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
 
-			.block {
-				display: flex;
-				align-items: start;
-				justify-content: start;
-				flex-direction: column;
-				gap: 20px;
+      .block {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+        gap: 15px;
+        width: 40%;
 
-				h1 {
-					font-family: Silk Serif;
-					font-size: 40px;
-					font-weight: 600;
-					line-height: 61.36px;
-					width: 238px;
-				}
+        h1 {
+          font-family: Silk Serif;
+          font-size: 35px;
+          font-weight: 600;
+          line-height: 30px;
+          width: 238px;
+        }
 
-				h5 {
-					font-family: Spartan;
-					font-size: 24px;
-					font-weight: 500;
-					line-height: 24px;
-					color: #ef272c;
-					margin-top: 20px;
-				}
+        h5 {
+          font-family: Spartan;
+          font-size: 24px;
+          font-weight: 500;
+          color: #ef272c;
+          margin-top: 10px;
+        }
 
-				h4 {
-					font-family: Spartan;
-					font-size: 20px;
-					font-weight: 500;
-					line-height: 24px;
-				}
+        h4 {
+          font-family: Spartan;
+          font-size: 20px;
+          font-weight: 500;
+          width: 300px;
+        }
 
-				.btn {
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					flex-direction: column;
-					margin-top: 10px;
-					gap: 8px;
-					button {
-						border: 1.6px solid #ef272c;
-						padding: 12px 22px;
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						gap: 7px;
-						font-family: Spartan;
-						font-size: 14px;
-						font-weight: 600;
-						line-height: 13.44px;
-						background: none;
-					}
-					hr {
-						width: 130px;
-						border: 1.4px solid #ef272c;
-					}
-				}
-			}
+        .btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          gap: 8px;
+          button {
+            border: 1.6px solid #ef272c;
+            padding: 12px 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            font-family: Spartan;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 13.44px;
+            background: none;
+          }
+          hr {
+            width: 130px;
+            border: 1.4px solid #ef272c;
+          }
+        }
+      }
 
-			.block2 {
-				width: 600px;
-				height: 490px;
-				border-radius: 2px 0px 0px 0px;
-				background: #ef272c;
-				padding: 44px;
+      .block2 {
+        width: 47%;
+        height: 380px;
+        border-radius: 2px;
+        background: #ef272c;
+        padding: 30px;
+        color: black;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+        gap: 10px;
 
-				display: flex;
-				align-items: start;
-				justify-content: start;
-				flex-direction: column;
-				gap: 20px;
+        .contact {
+          display: flex;
+          align-items: start;
+          justify-content: start;
+          flex-direction: column;
+          gap: 10px;
 
-				.contact {
-					display: flex;
-					align-items: start;
-					justify-content: start;
-					flex-direction: column;
-					gap: 20px;
-
-					.number {
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						gap: 15px;
-					}
-				}
-			}
-		}
-	}
+          .number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {
-	.VisitRestaurant {
-		.content {
-			.box {
-				display: flex;
-				align-items: start;
-				justify-content: start;
-				flex-direction: column;
-			}
-		}
-	}
+  .VisitRestaurant {
+    .content {
+      .box {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+      }
+    }
+  }
 }

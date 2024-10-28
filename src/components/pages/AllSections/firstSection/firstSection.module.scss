@@ -1,212 +1,208 @@
 .typingText {
-	display: flex;
-	gap: 0.5px;
-	span {
-		font-size: 64px;
-		font-weight: 600;
-		line-height: 98.18px;
-		color: white;
-		font-family: 'Silk Serif';
-	}
+  display: flex;
+  gap: 0.5px;
+  span {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 98.18px;
+    color: white;
+    font-family: "Silk Serif";
+  }
 }
 
 .FirstSection {
-	background-image: linear-gradient(
-			180deg,
-			rgba(27, 32, 38, 0.4) 46.81%,
-			rgba(27, 32, 38, 0.8) 100.67%
-		),
-		url('../../../../images/fisrt_section.png');
-	background-size: cover;
-	background-position: center;
-	padding-top: 100px;
-	overflow: hidden;
+  background-image: linear-gradient(
+      180deg,
+      rgba(27, 32, 38, 0.4) 46.81%,
+      rgba(27, 32, 38, 0.8) 100.67%
+    ),
+    url("/fisrtSection.png");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
 
-	.content {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		position: relative;
-		gap: 10px;
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    gap: 10px;
 
-		.backdrop {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: rgba(0, 0, 0, 0.6);
-			z-index: 88;
-			opacity: 0;
-			transition: opacity 0.3s ease;
-			&.show {
-				opacity: 1;
-			}
-		}
+    .backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 88;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      &.show {
+        opacity: 1;
+      }
+    }
 
-		.mainBlock {
-			margin-top: 150px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: column;
+    .mainBlock {
+      margin-top: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
 
-			.hero {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				gap: 10px;
-				margin-bottom: 18px;
+      .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
 
-				h1 {
-					font-family: Shalimar;
-					font-size: 40px;
-					font-weight: 400;
-					line-height: 48.8px;
-				}
-			}
+        h1 {
+          font-family: Shalimar;
+          font-size: 40px;
+          font-weight: 400;
+          line-height: 48.8px;
+        }
+      }
 
-			h1 {
-				font-family: Silk Serif;
-				font-size: 64px;
-				font-weight: 600;
-				line-height: 98.18px;
-				text-align: left;
-			}
-			p {
-				font-family: Spartan;
-				font-size: 16px;
-				font-weight: 500;
-				line-height: 17.92px;
-				text-align: center;
-				width: 500px;
-			}
+      h1 {
+        font-family: Silk Serif;
+        font-size: 64px;
+        font-weight: 600;
+        line-height: 98.18px;
+        text-align: left;
+      }
+      p {
+        font-family: Spartan;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 17.92px;
+        text-align: center;
+        width: 500px;
+      }
 
-			.btn {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				flex-direction: column;
-				margin-top: 10px;
-				gap: 8px;
-				position: relative;
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 10px;
+        gap: 8px;
+        position: relative;
 
-				hr {
-					width: 130px; /* ширина линий */
-					border: 1.4px solid #ef272c; /* цвет линий */
-					transition: transform 0.4s ease-in-out; /* плавный переход для трансформации */
-				}
+        hr {
+          width: 130px;
+          border: 1.4px solid #ef272c;
+          transition: transform 0.4s ease-in-out;
+        }
 
-				.formContact {
-					border: 1.6px solid #ef272c;
-					padding: 12px 22px;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					gap: 7px;
-					font-family: Spartan;
-					font-size: 12px;
-					font-weight: 600;
-					line-height: 13.44px;
-					text-align: left;
-					transition: background-color 0.4s ease-in-out;
-					cursor: pointer;
-					background: none;
-					.arrow {
-						transition: all 0.4s ease-in-out;
-					}
-					&:hover {
-						background-color: red;
-						.arrow {
-							margin-left: 5px;
-						}
-					}
-				}
+        .formContact {
+          border: 1.6px solid #ef272c;
+          padding: 12px 22px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 7px;
+          font-family: Spartan;
+          font-size: 12px;
+          font-weight: 600;
+          line-height: 13.44px;
+          text-align: left;
+          transition: background-color 0.4s ease-in-out;
+          cursor: pointer;
+          background: none;
+          .arrow {
+            transition: all 0.4s ease-in-out;
+          }
+          &:hover {
+            background-color: red;
+            .arrow {
+              margin-left: 5px;
+            }
+          }
+        }
 
-				&:hover {
-					hr:first-of-type {
-						transform: translateY(10px); /* Сдвиг верхней линии вправо */
-					}
-					hr:last-of-type {
-						transform: translateY(-10px); /* Сдвиг нижней линии влево */
-					}
-				}
-			}
+        &:hover {
+          hr:first-of-type {
+            transform: translateY(10px);
+          }
+          hr:last-of-type {
+            transform: translateY(-10px);
+          }
+        }
+      }
+    }
 
-			// New styles for the form
-		}
+    .contact {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 130px;
+      margin-bottom: 30px;
 
-		.contact {
-			width: 100%;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			margin-top: 130px;
-			margin-bottom: 30px;
+      .location {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
 
-			.location {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				gap: 10px;
-
-				h5 {
-					font-family: Spartan;
-					font-size: 14px;
-					font-weight: 600;
-					line-height: 15.68px;
-					text-align: left;
-				}
-				hr {
-					border: 0.6px solid #ffffff;
-					width: 56px;
-				}
-				span {
-					font-family: Spartan;
-					font-size: 12px;
-					font-weight: 500;
-					line-height: 13.44px;
-					text-align: left;
-				}
-			}
-		}
-	}
+        h5 {
+          font-family: Spartan;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 15.68px;
+          text-align: left;
+        }
+        hr {
+          border: 0.6px solid #ffffff;
+          width: 56px;
+        }
+        span {
+          font-family: Spartan;
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 13.44px;
+          text-align: left;
+        }
+      }
+    }
+  }
 }
 
-/* Медиа-запросы остаются без изменений */
 @media (max-width: 760px) {
-	.FirstSection {
-		.content {
-			.contact {
-				.location {
-					display: flex;
-					align-items: start;
-					justify-content: center;
-					flex-direction: column;
-					gap: 10px;
-					img {
-						display: none;
-					}
-				}
-			}
-		}
-	}
+  .FirstSection {
+    .content {
+      .contact {
+        .location {
+          display: flex;
+          align-items: start;
+          justify-content: center;
+          flex-direction: column;
+          gap: 10px;
+          img {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 505px) {
-	.FirstSection {
-		.content {
-			.mainBlock {
-				.delicious {
-					h4 {
-						font-size: 32px;
-					}
-				}
-				h1 {
-					font-size: 44px;
-				}
-			}
-		}
-	}
+  .FirstSection {
+    .content {
+      .mainBlock {
+        .delicious {
+          h4 {
+            font-size: 32px;
+          }
+        }
+        h1 {
+          font-size: 44px;
+        }
+      }
+    }
+  }
 }

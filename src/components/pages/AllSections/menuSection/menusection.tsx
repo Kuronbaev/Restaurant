@@ -3,7 +3,7 @@ import { categories, menuItems } from '@/data/categories'
 import {
 	default as leftIcon,
 	default as rightIcon,
-} from '@/images/leftIcon.png'
+} from '@/assets//images/leftIcon.png'
 import { AnimatePresence, motion, useInView } from 'framer-motion'
 import Image from 'next/image'
 import { useRef, useState } from 'react'
