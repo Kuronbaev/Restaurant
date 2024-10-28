@@ -51,23 +51,24 @@
           font-size: 16px;
           font-weight: 400;
           line-height: 24px;
+          width: 400px;
         }
-      }
-      .images {
       }
     }
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1150px) {
   .BestSellers {
     .content {
       .block {
         display: flex;
         align-items: start;
         justify-content: start;
-        gap: 10px;
+        flex-direction: column;
+        gap: 20px;
         .text {
+          width: 100%;
           h1 {
             font-size: 40px;
             width: 320px;
@@ -78,19 +79,7 @@
           }
         }
         .images {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 400px;
-          overflow-x: scroll;
-          gap: 5px;
-          .arrow {
-            width: 23px;
-            height: 40px;
-          }
-          img {
-            object-fit: cover;
-          }
+          width: 100%;
         }
       }
     }
@@ -113,7 +102,7 @@
 
           p {
             font-size: 16px;
-            width: 400px;
+            width: 330px;
           }
         }
       }
