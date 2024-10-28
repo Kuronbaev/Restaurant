@@ -1,13 +1,13 @@
-"use client";
-import interior1 from "@/assets/images/interior1.png";
-import interior2 from "@/assets/images/interior2.png";
-import interior3 from "@/assets/images/interior3.png";
-import interior4 from "@/assets/images/interior4.png";
-import interior5 from "@/assets/images/interior5.png";
-import leftIcon from "@/assets/images/leftIcon.png";
-import rightIcon from "@/assets/images/rightIcon.png";
-import Image from "next/image";
-import scss from "./interior.module.scss";
+'use client'
+import interior1 from '@/assets/images/interior1.png'
+import interior2 from '@/assets/images/interior2.png'
+import interior3 from '@/assets/images/interior3.png'
+import interior4 from '@/assets/images/interior4.png'
+import interior5 from '@/assets/images/interior5.png'
+import leftIcon from '@/assets/images/leftIcon.png'
+import rightIcon from '@/assets/images/rightIcon.png'
+import Image from 'next/image'
+import scss from './interior.module.scss'
 
 const Interior = () => {
   return (
@@ -96,4 +96,5 @@ const Interior = () => {
   );
 };
 
-export default Interior;
+
+export default Interior
