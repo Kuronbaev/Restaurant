@@ -14,7 +14,7 @@ const VisitRestaurant = () => {
 	const ref = useRef(null)
 	const isInView = useInView(ref, { once: true })
 	return (
-		<section id='contact' className={scss.VisitRestaurant}>
+		<section id='contacts' className={scss.VisitRestaurant}>
 			<div className='container'>
 				<div className={scss.content}>
 					<motion.div

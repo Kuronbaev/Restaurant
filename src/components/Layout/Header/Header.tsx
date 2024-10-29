@@ -47,7 +47,7 @@ const Header = () => {
 								<Link href='#interior'>Interior</Link>
 								<Link href='/menu'>Menu</Link>
 								<Link href='#about'>About us</Link>
-								<Link href='#contact'>Contacts</Link>
+								<Link href='#contacts'>Contacts</Link>
 							</nav>
 						</>
 					)}

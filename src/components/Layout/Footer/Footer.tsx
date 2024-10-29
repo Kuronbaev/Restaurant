@@ -1,5 +1,8 @@
 'use client '
+import telegram from '@/assets//images/Telegram.png'
+import instagram from '@/assets/images/Instagram.png'
 import { motion, useInView } from 'framer-motion'
+import Image from 'next/image'
 import { useRef } from 'react'
 import scss from './Footer.module.scss'
 const Footer = () => {
@@ -29,9 +32,11 @@ const Footer = () => {
 
 						<nav className={scss.soc}>
 							<a href='https://t.me/Amir030707' target='_blank'>
-								Telegram
+								<Image src={telegram} alt='telegram' width={30} height={27} />
 							</a>
-							<a href='#'>Instagram</a>
+							<a href='#'>
+								<Image src={instagram} alt='instagram' width={30} height={27} />
+							</a>
 						</nav>
 					</div>
 					<hr />

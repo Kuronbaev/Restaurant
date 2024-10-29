@@ -2,7 +2,7 @@
 import { categories, menus } from '@/data/categories'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import del from '../../../assets/images/delElement.png'
 import scss from './Menu.module.scss'
 
@@ -19,26 +19,62 @@ type MenuType = keyof typeof menus
 
 const Menu = () => {
 	const [selectedCategory, setSelectedCategory] = useState<MenuType>(
-		categories[0].name as MenuType // Приведение типа для начального значения
+		categories[0].name as MenuType
 	)
 	const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null)
+	const selectedItemRef = useRef<HTMLDivElement>(null)
 
-	const handleCategory = (categoryName: MenuType) => {
-		if (!selectedItem) {
-			setSelectedCategory(categoryName)
-			setSelectedItem(null)
+	const handleCategory = useCallback(
+		(categoryName: MenuType) => {
+			if (!selectedItem) {
+				setSelectedCategory(categoryName)
+				setSelectedItem(null)
+			}
+		},
+		[selectedItem]
+	)
+
+	const handleItemClick = useCallback(
+		(item: MenuItem) => {
+			if (!selectedItem) {
+				setSelectedItem(item)
+				window.scrollTo(0, 0)
+			}
+		},
+		[selectedItem]
+	)
+
+	const handleCloseSelectedItem = () => setSelectedItem(null)
+
+	// useEffect для отслеживания активации selectedItem и отключения прокрутки
+	useEffect(() => {
+		// Функция для управления прокруткой
+		const toggleScroll = (disableScroll: boolean) => {
+			if (window.innerWidth <= 430) {
+				document.body.classList.toggle('no-scroll', disableScroll)
+			}
 		}
-	}
 
-	const handleItemClick = (item: MenuItem) => {
-		if (!selectedItem) {
-			setSelectedItem(item)
+		// Отключаем прокрутку, если выбран элемент
+		toggleScroll(Boolean(selectedItem))
+
+		// Очистка при размонтировании
+		return () => document.body.classList.remove('no-scroll')
+	}, [selectedItem])
+
+	// useEffect для закрытия элемента по клику вне области
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if (
+				selectedItemRef.current &&
+				!selectedItemRef.current.contains(event.target as Node)
+			) {
+				setSelectedItem(null)
+			}
 		}
-	}
-
-	const handleCloseSelectedItem = () => {
-		setSelectedItem(null)
-	}
+		document.addEventListener('mousedown', handleClickOutside)
+		return () => document.removeEventListener('mousedown', handleClickOutside)
+	}, [])
 
 	return (
 		<motion.section
@@ -51,16 +87,15 @@ const Menu = () => {
 			<div className='container'>
 				<div className={scss.content}>
 					<div className={scss.categoryMobile}>
-						<div className={scss.categories}>
+						<motion.div
+							initial={{ opacity: 0, x: -50 }}
+							animate={{ opacity: 1, x: 0 }}
+							transition={{ duration: 0.5 }}
+							className={scss.categories}
+						>
 							{categories.map(category => (
-								<motion.button
+								<button
 									key={category.id}
-									initial={{ opacity: 0, x: -100 }}
-									animate={{ opacity: 1, x: 0 }}
-									transition={{
-										delay: category.id * 0.1,
-										duration: 0.5,
-									}}
 									onClick={() => handleCategory(category.name as MenuType)}
 									className={`${scss.categorybutton} ${
 										selectedCategory === category.name ? scss.active : ''
@@ -68,11 +103,12 @@ const Menu = () => {
 									aria-label={`Select ${category.name} category`}
 								>
 									{category.name}
-								</motion.button>
+								</button>
 							))}
-						</div>
+						</motion.div>
 					</div>
 					<motion.div
+						ref={selectedItemRef}
 						key={selectedCategory}
 						initial={{ opacity: 0, y: 10 }}
 						animate={{ opacity: 1, y: 0 }}
