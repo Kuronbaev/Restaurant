@@ -11,7 +11,7 @@ import scss from "./interior.module.scss";
 
 const Interior = () => {
   return (
-    <section className={scss.Interior}>
+    <section className={scss.Interior} id="interior">
       <div className="container">
         <div className={scss.content}>
           <div className={scss.hero}>
@@ -23,8 +23,8 @@ const Interior = () => {
             <Image
               src={interior1}
               alt="photo"
-              width={400}
-              height={400}
+              width={426}
+              height={488}
               quality={100}
             />
 
@@ -32,32 +32,33 @@ const Interior = () => {
               <Image
                 src={interior2}
                 alt="photo"
-                width={415}
-                height={200}
+                width={501}
+                height={244}
                 quality={100}
               />
               <div className={scss.images}>
                 <Image
                   src={interior3}
                   alt="photo"
-                  width={200}
-                  height={186}
+                  width={278}
+                  height={223}
                   quality={100}
                 />
                 <Image
                   src={interior4}
                   alt="photo"
-                  width={200}
-                  height={186}
+                  width={208}
+                  height={223}
                   quality={100}
                 />
               </div>
             </div>
+
             <Image
               src={interior1}
               alt="photo"
-              width={400}
-              height={400}
+              width={426}
+              height={488}
               quality={100}
             />
 
@@ -65,28 +66,29 @@ const Interior = () => {
               <Image
                 src={interior2}
                 alt="photo"
-                width={415}
-                height={200}
+                width={501}
+                height={244}
                 quality={100}
               />
               <div className={scss.images}>
                 <Image
                   src={interior3}
                   alt="photo"
-                  width={200}
-                  height={186}
+                  width={278}
+                  height={223}
                   quality={100}
                 />
                 <Image
                   src={interior4}
                   alt="photo"
-                  width={200}
-                  height={186}
+                  width={208}
+                  height={223}
                   quality={100}
                 />
               </div>
             </div>
-            <Image src={interior5} alt="photo" width={400} height={400} />
+
+            <Image src={interior5} alt="photo" width={427} height={488} />
           </div>
         </div>
       </div>

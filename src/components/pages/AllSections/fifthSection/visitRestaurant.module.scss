@@ -29,14 +29,13 @@
         justify-content: start;
         flex-direction: column;
         gap: 15px;
-        width: 40%;
+        width: 50%;
 
         h1 {
           font-family: Silk Serif;
-          font-size: 35px;
+          font-size: 40px;
           font-weight: 600;
-          line-height: 30px;
-          width: 238px;
+          line-height: 61.36px;
         }
 
         h5 {
@@ -81,8 +80,8 @@
       }
 
       .block2 {
-        width: 550px;
-        height: 400px;
+        width: 600px;
+        height: 500px;
         border-radius: 2px;
         background: #ef272c;
         padding: 30px;
@@ -108,13 +107,11 @@
           }
         }
         .map {
+          margin-top: 20px;
           width: 100%;
           display: flex;
           align-items: center;
           justify-content: center;
-          max-width: 400px;
-          height: 180px;
-          margin-left: 45px;
         }
       }
     }

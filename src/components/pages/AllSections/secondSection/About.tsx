@@ -31,7 +31,7 @@ const About = () => {
               animate={inInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 1 }}
             >
-              A Journey Through Cafesio Flavors
+              A Journey Through Cafesio <br /> Flavors
             </motion.h1>
             <motion.p
               ref={ref}
