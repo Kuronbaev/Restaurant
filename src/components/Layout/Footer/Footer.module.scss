@@ -43,6 +43,7 @@
 				justify-content: space-between;
 				gap: 24px;
 				a {
+					cursor: pointer;
 					img {
 						filter: brightness(0) invert(1); /* Применяем фильтр */
 					}
@@ -52,7 +53,6 @@
 		hr {
 			width: 100%;
 			border: 1px solid rgba(255, 255, 255, 0.8);
-			// margin-left: 130px;
 			margin-top: 27px;
 			margin-bottom: 18px;
 		}
@@ -67,6 +67,19 @@
 	.Footer {
 		.content {
 			.navs {
+				.inWeb {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1015px) {
+	.Footer {
+		.content {
+			.navs {
+				gap: 20px;
 				.inWeb {
 					display: none;
 				}
