@@ -46,7 +46,6 @@ const VisitRestaurant = () => {
 							<h4>Mon-Thu: 10:00 am - 01:00 am</h4>
 							<h4>Fri-Sun: 10:00 am - 02:00 am</h4>
 
-
 							<div className={scss.btn}>
 								<hr />
 								<button>
@@ -57,7 +56,7 @@ const VisitRestaurant = () => {
 						</motion.div>
 						<motion.div
 							ref={ref}
-							initial={{ opacity: 0, x: 100 }}
+							initial={{ opacity: 0, x: 50 }}
 							animate={isInView ? { opacity: 1, x: 0 } : {}}
 							transition={{
 								duration: 1,

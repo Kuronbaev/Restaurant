@@ -66,6 +66,16 @@ const Menu = () => {
 				</motion.div>
 				<div className={scss.menucontainer}>
 					<div className={scss.categoryMobile}>
+						<div className={scss.hero}>
+							<Image width={51} height={14} src={leftIcon} alt='photo' />
+							<h1>Main Menu</h1>
+							<Image width={51} height={14} src={rightIcon} alt='photo' />
+						</div>
+						<div className={scss.heros}>
+							<h2>
+								Exceptional Quality. <br /> Delightfully Delicious
+							</h2>
+						</div>
 						{categories.map(category => (
 							<button
 								key={category.id}

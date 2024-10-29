@@ -110,6 +110,7 @@
 			transition: background-color 0.3s ease, transform 0.2s ease,
 				color 0.3s ease;
 			line-height: 37px;
+			background-origin: red;
 			overflow: visible;
 
 			&::before {
@@ -120,6 +121,7 @@
 				left: 15%; // Adjust this value as needed for positioning
 				bottom: 6.2px;
 				border: 0.4px solid rgb(229, 229, 229);
+
 				transition: all 0.3s ease;
 			}
 		}
@@ -289,9 +291,68 @@
 		justify-content: center;
 		.categoryMobile {
 			display: block;
-			margin-left: 55%;
+			margin-left: 60%;
+			margin-bottom: 500px;
 		}
+		.categories {
+			display: none;
+		}
+		.menuitems {
+			display: none;
+		}
+	}
+}
 
+@media (max-width: 768px) {
+	.btn {
+		margin-top: 150px;
+	}
+	.menucontainer {
+		height: 300px;
+		width: 363px;
+		justify-content: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.categoryMobile {
+			display: block;
+			margin-left: 0;
+			margin-right: 40px;
+			margin-bottom: 500px;
+		}
+		.categories {
+			display: none;
+		}
+		.menuitems {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 425px) {
+	.btn {
+		margin-top: 250px;
+	}
+	.menucontainer {
+		width: 363px;
+		justify-content: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		font-size: 15px;
+		.categoryMobile {
+			display: block;
+
+			margin-left: 0;
+			margin-bottom: 500px;
+			button {
+				width: 200px;
+				&::before {
+					display: none;
+				}
+			}
+		}
 		.categories {
 			display: none;
 		}

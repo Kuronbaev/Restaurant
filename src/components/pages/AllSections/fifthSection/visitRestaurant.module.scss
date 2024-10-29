@@ -175,3 +175,15 @@
 		}
 	}
 }
+
+@media (max-width: 768px) {
+	.VisitRestaurant {
+		.content {
+			.box {
+				.block2 {
+					width: 0px;
+				}
+			}
+		}
+	}
+}
