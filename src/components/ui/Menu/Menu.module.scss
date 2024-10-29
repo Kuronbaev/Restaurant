@@ -402,3 +402,45 @@
 		}
 	}
 }
+
+@media (max-width: 375px) {
+	.Menu {
+		.content {
+			.menuitems {
+				.selectedItem {
+					left: -58px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	.Menu {
+		.content {
+			.menuitems {
+				.selectedItem {
+					left: -54px;
+					width: 320px;
+					padding-left: 10px;
+					.leftItems {
+						width: 300px;
+						img {
+							width: 300px;
+							object-fit: cover;
+						}
+					}
+					button {
+						top: 30px;
+						width: 30px;
+						height: 30px;
+						img {
+							width: 30px;
+							height: 30px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
